@@ -1,4 +1,4 @@
-/* Droplet VC - Final Styles with Neon Header and Animated CTA Button + Fixed Alignment */
+/* Droplet VC - Final Neon Styles (Centered Layout Fix) */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -32,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 0;
   position: relative;
@@ -89,6 +90,16 @@ body::before {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
   z-index: 10;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  max-width: 700px;
+  padding: 2rem 1rem;
 }
 
 h1 {
