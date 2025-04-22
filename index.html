@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Droplet VC</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #111;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,42 +20,53 @@
       text-align: center;
       padding: 0 1rem;
     }
+
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      font-family: 'Pacifico', cursive;
+      color: #ffefc3;
+      text-shadow: 2px 2px #ff4081;
     }
+
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       max-width: 600px;
-      margin: 0.5rem auto 1.5rem;
+      margin: 0.5rem auto 2rem;
     }
+
     .button {
       padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-family: 'Orbitron', sans-serif;
+      background: #00ffe7;
+      color: #222;
       border: none;
-      background: #000;
-      color: white;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 231, 0.5);
+      transition: transform 0.2s ease;
     }
+
     .button:hover {
-      background: #333;
+      transform: scale(1.05);
     }
+
     .contact {
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #fff;
     }
+
     .contact a {
-      color: #000;
-      text-decoration: none;
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <h1>Backing Global Outliers in Life & Deep Tech</h1>
-  <p>We partner early with scientist-founders building biotech and deep tech companies across Switzerland and California. Curious what we’re working on? Join the journey.</p>
+  <p>Curious what we’re working on? Join the journey.</p>
   
   <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Subscribe on Substack</a>
 
