@@ -1,4 +1,4 @@
-/* Droplet VC - Refined Layout and Clear Call-to-Action Flow */
+/* Droplet VC - Refined Neon Flicker Animation Without Scrambling */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -107,13 +107,15 @@ h1 {
   font-family: 'Pacifico', cursive;
   text-shadow: 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color);
   margin: 2rem 0 2.5rem;
-  animation: flicker 2.5s infinite alternate;
+  animation: flicker 3s ease-in-out infinite;
 }
 
 @keyframes flicker {
-  0% { opacity: 1; text-shadow: 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color); }
-  50% { opacity: 0.9; text-shadow: 0 0 2px var(--shadow-color), 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color); }
-  100% { opacity: 1; text-shadow: 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color), 0 0 30px var(--shadow-color); }
+  0%, 100% { opacity: 1; text-shadow: 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color); }
+  20% { opacity: 0.9; }
+  40% { opacity: 0.7; text-shadow: 0 0 3px var(--shadow-color); }
+  60% { opacity: 1; text-shadow: 0 0 15px var(--shadow-color); }
+  80% { opacity: 0.95; text-shadow: 0 0 7px var(--shadow-color); }
 }
 
 p {
