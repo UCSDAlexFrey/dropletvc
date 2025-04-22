@@ -6,6 +6,41 @@
   <title>Droplet VC</title>
   <link rel="icon" type="image/png" href="images/favicon-neon.png" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero-logo {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .cta-subtext {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: var(--text-color);
+      opacity: 0.85;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-gradient: linear-gradient(135deg, #1e0f1e, #005757);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        margin-top: 1.2rem;
+      }
+      .hero-logo {
+        margin-top: 1.5rem;
+      }
+      .button {
+        margin-bottom: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <img class="hero-logo" src="images/DropletVC_Transparent.png" alt="Droplet VC Logo">
@@ -14,6 +49,7 @@
   <p>Curious what we’re working on? Join the journey.</p>
 
   <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Subscribe on Substack</a>
+  <div class="cta-subtext">Get updates on what we're building next</div>
 
   <div class="contact">
     Or reach out directly at <a href="mailto:info@dropletvc.com">info@dropletvc.com</a>
