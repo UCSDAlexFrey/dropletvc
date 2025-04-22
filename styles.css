@@ -1,9 +1,9 @@
-/* Droplet VC - Final Neon Styles with Stronger Orange Watermark */
+/* Droplet VC - Final Neon Styles with SEO & Accessibility Tweaks */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
   --bg-gradient: linear-gradient(135deg, #ff3b30, #ffd60a);
-  --text-color: black;
+  --text-color: #111;
   --shadow-color: #ff3b30;
   --button-bg: #ffd60a;
   --button-hover: #ff6f00;
@@ -14,7 +14,7 @@
 
 .dark-mode {
   --bg-gradient: linear-gradient(135deg, #1e0f1e, #005757);
-  --text-color: white;
+  --text-color: #f2f2f2;
   --shadow-color: #ff40b0;
   --button-bg: #00c7be;
   --button-hover: #ff3b30;
@@ -169,6 +169,13 @@ p {
 .contact a {
   color: var(--text-color);
   text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 @media (max-width: 600px) {
