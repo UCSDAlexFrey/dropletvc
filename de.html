@@ -4,24 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Droplet VC</title>
-  <meta name="description" content="Droplet VC unterstützt visionäre Gründer:innen in Life Sciences und Deep Tech. Basierend in Kalifornien mit Schweizer Wurzeln." />
+  <meta name="description" content="Droplet VC unterstützt außergewöhnliche Gründer:innen im Bereich Life Sciences und Deep Tech. Basierend in Kalifornien mit Schweizer Wurzeln." />
   <link rel="icon" type="image/png" href="images/favicon-neon.png" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark-mode');
+      const icon = document.getElementById('theme-icon');
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      icon.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const icon = document.getElementById('theme-icon');
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+        icon.textContent = '☀️';
+      } else {
+        icon.textContent = '🌙';
+      }
+    });
+  </script>
 </head>
 <body>
+  <div class="logo-top-left"></div>
+
   <div class="lang-toggle">
     <a href="index.html">EN</a>
   </div>
-
-  <img class="hero-logo" src="images/droplet_red_orange_gradient.png" alt="Droplet VC Logo">
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+  </div>
 
   <main>
     <h1>Wir unterstützen krasse Gründer:innen in Life & Deep Tech</h1>
     <p>Neugierig, was wir gerade so aufbauen? Stay tuned.</p>
 
-    <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">
-      Newsletter abonnieren
-    </a>
+    <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Newsletter abonnieren</a>
     <div class="cta-subtext">Updates zu spannenden Startups, Deep Tech Trends & neuen Ideen</div>
   </main>
 
