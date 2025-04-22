@@ -4,15 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Droplet VC</title>
-  <meta name="description" content="Droplet VC unterstützt ussergwöhnlichi Gründer:inne in Deep Tech. Vo Kalifornie mit Zürcher Wurzle." />
+  <meta name="description" content="Droplet VC unterstützt aussergwöhnlichi Gründer:inne im Deep Tech. Vo Kalifornie mit Zürcher Wurzle." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dropletvc.com/de.html" />
   <link rel="icon" type="image/png" href="images/favicon-neon.png" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dropletvc.com/" />
+  <meta property="og:title" content="Droplet VC – Fördert globali Usnahmetalänt im Deep Tech" />
+  <meta property="og:description" content="Mir unterstützet Pre-Seed & Seed-Startups vo Züri bis Kalifornie." />
+  <meta property="og:image" content="images/og-preview.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://dropletvc.com/" />
+  <meta name="twitter:title" content="Droplet VC – Fördert globali Usnahmetalänt im Deep Tech" />
+  <meta name="twitter:description" content="Mir unterstützet Pre-Seed & Seed-Startups vo Züri bis Kalifornie." />
+  <meta name="twitter:image" content="images/og-preview.png" />
+
   <script>
     function toggleTheme() {
       document.documentElement.classList.toggle('dark-mode');
       localStorage.setItem('theme', document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light');
     }
-
     document.addEventListener('DOMContentLoaded', () => {
       const theme = localStorage.getItem('theme');
       if (theme === 'dark') {
@@ -26,13 +42,15 @@
     <a href="index.html">EN</a>
   </div>
 
-  <div class="hero-logo left-small" onclick="toggleTheme()"></div>
+  <div class="hero-logo left-small" role="img" aria-label="Droplet VC Logo" onclick="toggleTheme()"></div>
 
   <main class="main-content">
     <h1>Mir förderet globali Usnahmetalänt in Deep Tech</h1>
-    <p>Neugierig, was mir grad am Bastle sind?</p>
+    <p>Neugierig, was mir grad am Bastele sind?</p>
     <div class="cta-subtext">Blieb im Loop mit eusne Updates...</div>
-    <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Newsletter abonniere</a>
+    <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">
+      Newsletter abonnieren
+    </a>
   </main>
 
   <footer class="contact">
