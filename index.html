@@ -44,6 +44,20 @@
       overflow-x: hidden;
     }
 
+    body::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url('images/DropletVC_WhiteTransparent.png') center center / 80% no-repeat;
+      opacity: 0.03;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
     h1 {
       font-size: 2.5rem;
       margin-top: 2rem;
@@ -96,6 +110,7 @@
     .hero-logo {
       width: 180px;
       margin-top: 2rem;
+      z-index: 1;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -116,6 +131,7 @@
       gap: 1rem;
       justify-content: center;
       margin-top: 3rem;
+      z-index: 1;
     }
 
     .logo-row img {
@@ -136,7 +152,6 @@
 
   <div class="logo-row">
     <img src="images/droplet_red_orange_gradient.png" alt="Red Orange Gradient Logo" />
-    <img src="images/DropletVC_WhiteTransparent.png" alt="White Transparent Logo" />
     <img src="images/DropletVC_Transparent.png" alt="Original Transparent Logo" />
     <img src="images/DropletVC_BlackOnWhite.png" alt="Black on White Logo" />
   </div>
