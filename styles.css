@@ -1,4 +1,4 @@
-/* Droplet VC - Simplified and Corrected Styles */
+/* Droplet VC - Revised Styles for Better Text Positioning */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -32,14 +32,14 @@ body {
   font-family: 'Orbitron', sans-serif;
   background: var(--bg-gradient);
   color: var(--text-color);
+  min-height: 100vh;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  justify-content: flex-start;
   text-align: center;
-  padding: 2rem 1rem;
   position: relative;
-  overflow-x: hidden;
 }
 
 body::before {
@@ -55,72 +55,6 @@ body::before {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-}
-
-.hero-logo {
-  width: 180px;
-  margin-top: 2rem;
-  z-index: 1;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 2rem;
-  font-family: 'Pacifico', cursive;
-  text-shadow: 2px 2px var(--shadow-color);
-  z-index: 1;
-}
-
-p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  z-index: 1;
-}
-
-.button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-  z-index: 1;
-}
-
-.button:hover {
-  background: var(--button-hover);
-  color: white;
-  transform: scale(1.05);
-}
-
-.cta-subtext {
-  font-size: 0.9rem;
-  opacity: 0.85;
-  margin-top: 0.5rem;
-  z-index: 1;
-}
-
-.contact {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  z-index: 1;
-}
-
-.contact a {
-  color: var(--text-color);
-  text-decoration: underline;
 }
 
 .lang-toggle {
@@ -142,6 +76,79 @@ p {
 
 .lang-toggle a:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-logo {
+  width: 180px;
+  margin-top: 3rem;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+main {
+  z-index: 1;
+  max-width: 700px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px var(--shadow-color);
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  line-height: 1.5;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.button:hover {
+  background: var(--button-hover);
+  color: white;
+  transform: scale(1.05);
+}
+
+.cta-subtext {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 0.5rem;
+}
+
+.contact {
+  font-size: 0.9rem;
+  margin: 3rem 1rem 1rem;
+  z-index: 1;
+  text-align: center;
+}
+
+.contact a {
+  color: var(--text-color);
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
