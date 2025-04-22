@@ -6,62 +6,6 @@
   <title>Droplet VC</title>
   <link rel="icon" type="image/png" href="images/favicon-neon.png" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .hero-logo {
-      animation: fadeIn 1s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    .cta-subtext {
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-      color: var(--text-color);
-      opacity: 0.85;
-    }
-
-    .lang-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: 2;
-    }
-
-    .lang-toggle a {
-      font-size: 0.9rem;
-      text-decoration: none;
-      color: var(--text-color);
-      background: rgba(255,255,255,0.1);
-      padding: 0.4rem 0.7rem;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    .lang-toggle a:hover {
-      background: rgba(255,255,255,0.3);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-gradient: linear-gradient(135deg, #1e0f1e, #005757);
-      }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        margin-top: 1.2rem;
-      }
-      .hero-logo {
-        margin-top: 1.5rem;
-      }
-      .button {
-        margin-bottom: 1.2rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="lang-toggle">
@@ -74,22 +18,26 @@
     <img class="hero-logo" src="images/DropletVC_Transparent.png" alt="Droplet VC Logo">
   </picture>
 
-  <h1>Backing Global Outliers in Life & Deep Tech</h1>
-  <p>Curious what we’re working on? Join the journey.</p>
+  <main>
+    <h1>Backing Global Outliers in Life & Deep Tech</h1>
+    <p>Curious what we’re working on? Join the journey.</p>
 
-  <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Subscribe on Substack</a>
-  <div class="cta-subtext">Get updates on what we're building next</div>
+    <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">
+      Subscribe on Substack
+    </a>
+    <div class="cta-subtext">Get updates on what we're building next</div>
+  </main>
 
-  <div class="logo-row">
-    <img src="images/droplet_pink_teal_gradient.png" alt="Droplet Pink Teal Gradient Logo" />
-    <img src="images/droplet_red_orange_gradient.png" alt="Droplet Red Orange Gradient Logo" />
-    <img src="images/DropletVC_WhiteTransparent.png" alt="Droplet White Transparent Logo" />
-    <img src="images/DropletVC_Transparent.png" alt="Droplet Transparent Logo" />
-    <img src="images/DropletVC_BlackOnWhite.png" alt="Droplet Black on White Logo" />
-  </div>
+  <section class="logo-row">
+    <img src="images/droplet_pink_teal_gradient.png" alt="Droplet Pink Teal Gradient Logo">
+    <img src="images/droplet_red_orange_gradient.png" alt="Droplet Red Orange Gradient Logo">
+    <img src="images/DropletVC_WhiteTransparent.png" alt="Droplet White Transparent Logo">
+    <img src="images/DropletVC_Transparent.png" alt="Droplet Transparent Logo">
+    <img src="images/DropletVC_BlackOnWhite.png" alt="Droplet Black on White Logo">
+  </section>
 
-  <div class="contact">
+  <footer class="contact">
     Or reach out directly at <a href="mailto:info@dropletvc.com">info@dropletvc.com</a>
-  </div>
+  </footer>
 </body>
 </html>
