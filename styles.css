@@ -1,4 +1,4 @@
-/* Droplet VC - Large Logo as Part of Page Design */
+/* Droplet VC - Final Styles with Neon Header and Animated CTA */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -75,69 +75,33 @@ body::before {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.theme-toggle {
-  position: absolute;
-  top: 1rem;
-  left: 3.5rem;
+.hero-logo.left-small {
+  width: 100px;
+  height: 100px;
   cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 2;
-}
-
-.logo-top-left {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-image: var(--logo-url);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 3;
-}
-
-.hero-logo {
-  width: 300px;
-  height: 300px;
+  align-self: flex-start;
+  margin-left: 1rem;
   margin-top: 2rem;
-  margin-right: 2rem;
-  align-self: flex-end;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--logo-bg);
-  padding: 0.75rem;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 1s ease-in-out;
-  z-index: 1;
   background-image: var(--logo-url);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-main {
-  z-index: 1;
-  max-width: 700px;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
 h1 {
   font-size: 2.5rem;
   font-family: 'Pacifico', cursive;
-  text-shadow: 2px 2px var(--shadow-color);
+  text-shadow: 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color);
   margin: 1rem 0;
+  animation: flicker 2.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color); }
+  50% { opacity: 0.9; text-shadow: 0 0 2px var(--shadow-color), 0 0 5px var(--shadow-color), 0 0 10px var(--shadow-color); }
+  100% { opacity: 1; text-shadow: 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color), 0 0 30px var(--shadow-color); }
 }
 
 p {
@@ -158,6 +122,13 @@ p {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
   margin-bottom: 1rem;
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px var(--shadow-color); transform: scale(1); }
+  50% { box-shadow: 0 0 20px var(--shadow-color); transform: scale(1.03); }
+  100% { box-shadow: 0 0 10px var(--shadow-color); transform: scale(1); }
 }
 
 .button:hover {
@@ -188,15 +159,10 @@ p {
   h1 {
     font-size: 2rem;
   }
-  .hero-logo {
-    width: 200px;
-    height: 200px;
-    margin-right: 0;
+  .hero-logo.left-small {
+    margin-left: auto;
+    margin-right: auto;
     align-self: center;
-  }
-  .logo-top-left {
-    width: 28px;
-    height: 28px;
   }
   .button {
     font-size: 1rem;
