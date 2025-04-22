@@ -21,6 +21,12 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-gradient: linear-gradient(135deg, #1e0f1e, #005757);
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -80,12 +86,20 @@ p {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, background 0.3s ease;
   z-index: 1;
+  margin-bottom: 0.75rem;
 }
 
 .button:hover {
   transform: scale(1.05);
   background: var(--button-hover);
   color: white;
+}
+
+.cta-subtext {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.85;
+  z-index: 1;
 }
 
 .contact {
@@ -104,32 +118,22 @@ p {
   width: 180px;
   margin-top: 2rem;
   z-index: 1;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  .hero-logo {
-    content: url('images/droplet_pink_teal_gradient.png');
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    margin-top: 1.2rem;
   }
-}
-
-@media (prefers-color-scheme: light) {
   .hero-logo {
-    content: url('images/droplet_red_orange_gradient.png');
+    margin-top: 1.5rem;
   }
-}
-
-.logo-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 3rem;
-  z-index: 1;
-}
-
-.logo-row img {
-  width: 120px;
-  height: auto;
-  border-radius: 10px;
-  background: white;
+  .button {
+    margin-bottom: 1.2rem;
+  }
 }
