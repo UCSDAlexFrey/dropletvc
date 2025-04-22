@@ -1,4 +1,4 @@
-/* Droplet VC - Final Styles with Neon Header and Animated CTA */
+/* Droplet VC - Final Styles with Neon Header and Animated CTA Button + Fixed Alignment */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -79,15 +79,16 @@ body::before {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  align-self: flex-start;
-  margin-left: 1rem;
-  margin-top: 2rem;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
   background-image: var(--logo-url);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  z-index: 10;
 }
 
 h1 {
@@ -160,9 +161,8 @@ p {
     font-size: 2rem;
   }
   .hero-logo.left-small {
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .button {
     font-size: 1rem;
