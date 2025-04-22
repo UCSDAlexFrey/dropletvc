@@ -23,6 +23,27 @@
       opacity: 0.85;
     }
 
+    .lang-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 2;
+    }
+
+    .lang-toggle a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--text-color);
+      background: rgba(255,255,255,0.1);
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .lang-toggle a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
     @media (prefers-color-scheme: dark) {
       :root {
         --bg-gradient: linear-gradient(135deg, #1e0f1e, #005757);
@@ -43,6 +64,10 @@
   </style>
 </head>
 <body>
+  <div class="lang-toggle">
+    <a href="de.html">DE</a>
+  </div>
+
   <picture>
     <source srcset="images/droplet_red_orange_gradient.png" media="(prefers-color-scheme: light)">
     <source srcset="images/droplet_pink_teal_gradient.png" media="(prefers-color-scheme: dark)">
