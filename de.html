@@ -10,20 +10,13 @@
   <script>
     function toggleTheme() {
       document.documentElement.classList.toggle('dark-mode');
-      const icon = document.getElementById('theme-icon');
-      const isDark = document.documentElement.classList.contains('dark-mode');
-      icon.textContent = isDark ? '☀️' : '🌙';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const icon = document.getElementById('theme-icon');
       const theme = localStorage.getItem('theme');
       if (theme === 'dark') {
         document.documentElement.classList.add('dark-mode');
-        icon.textContent = '☀️';
-      } else {
-        icon.textContent = '🌙';
       }
     });
   </script>
@@ -31,20 +24,19 @@
     .hero-logo.left-small {
       width: 100px;
       height: 100px;
+      cursor: pointer;
+      align-self: flex-start;
+      margin-left: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="logo-top-left"></div>
-
   <div class="lang-toggle">
     <a href="index.html">EN</a>
   </div>
-  <div class="theme-toggle" onclick="toggleTheme()">
-    <span id="theme-icon">🌙</span>
-  </div>
 
-  <div class="hero-logo left-small"></div>
+  <div class="hero-logo left-small" onclick="toggleTheme()"></div>
 
   <main>
     <h1>Wir unterstützen krasse Gründer:innen in Life & Deep Tech</h1>
