@@ -7,7 +7,7 @@
   <meta name="description" content="Droplet VC is a venture fund connecting Swiss and Californian founders in frontier science and deep tech.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dropletvc.com/">
-  <link id="favicon" rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon-neon.png">
   <link rel="stylesheet" href="styles.css">
 
   <!-- Open Graph / Facebook -->
@@ -15,29 +15,26 @@
   <meta property="og:url" content="https://dropletvc.com/">
   <meta property="og:title" content="Droplet VC – Backing Global Outliers in Deep Tech">
   <meta property="og:description" content="We support pre-seed & seed-stage deep tech startups from Switzerland and California.">
-  <meta property="og:image" content="images/favicon.png">
+  <meta property="og:image" content="images/favicon-neon.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://dropletvc.com/">
   <meta name="twitter:title" content="Droplet VC – Backing Global Outliers in Deep Tech">
   <meta name="twitter:description" content="We support pre-seed & seed-stage deep tech startups from Switzerland and California.">
-  <meta name="twitter:image" content="images/favicon.png">
+  <meta name="twitter:image" content="images/favicon-neon.png">
 
   <script>
     function toggleTheme() {
-      const root = document.documentElement;
-      root.classList.toggle('dark-mode');
-      const isDark = root.classList.contains('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      document.getElementById('favicon').href = isDark ? 'images/favicon-neon.png' : 'images/favicon.png';
+      document.documentElement.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
-      const isDark = savedTheme === 'dark';
-      if (isDark) document.documentElement.classList.add('dark-mode');
-      document.getElementById('favicon').href = isDark ? 'images/favicon-neon.png' : 'images/favicon.png';
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
     });
   </script>
 </head>
