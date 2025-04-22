@@ -15,29 +15,26 @@
   <meta property="og:url" content="https://dropletvc.com/">
   <meta property="og:title" content="Droplet VC – Fördert globali Usnahmetalänt im Deep Tech">
   <meta property="og:description" content="Mir unterstützet Pre-Seed & Seed-Startups vo Züri bis Kalifornie.">
-  <meta property="og:image" content="images/favicon.png">
+  <meta property="og:image" content="images/favicon-neon.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://dropletvc.com/">
   <meta name="twitter:title" content="Droplet VC – Fördert globali Usnahmetalänt im Deep Tech">
   <meta name="twitter:description" content="Mir unterstützet Pre-Seed & Seed-Startups vo Züri bis Kalifornie.">
-  <meta name="twitter:image" content="images/favicon.png">
+  <meta name="twitter:image" content="images/favicon-neon.png">
 
   <script>
     function toggleTheme() {
-      const root = document.documentElement;
-      root.classList.toggle('dark-mode');
-      const isDark = root.classList.contains('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      
+      document.documentElement.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
-      const isDark = savedTheme === 'dark';
-      if (isDark) document.documentElement.classList.add('dark-mode');
-      
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
     });
   </script>
 </head>
@@ -49,14 +46,14 @@
   <div class="hero-logo left-small" role="img" aria-label="Droplet VC Logo" onclick="toggleTheme()"></div>
 
   <main class="main-content">
-    <h1>Mir förderet globali Usnahmetalänt in Deep Tech</h1>
-    <p>Neugierig, was mir grad am Bastele sind?</p>
-    <div class="cta-subtext">Blieb im Loop mit eusne Updates...</div>
+    <h1>Droplet VC</h1>
+    <h2>Mir förderet globali Usnahmetalänt in Deep Tech</h2>
+    <div class="cta-subtext">Neugierig, was mir grad am Bastle sind?</div>
     <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Newsletter abonnieren</a>
   </main>
 
   <footer class="contact">
-    Häsch eh Frag? Schreib eus: <a href="mailto:info@dropletvc.com">info@dropletvc.com</a>
+    Häsch eh Frag? Schrieb eus: <a href="mailto:info@dropletvc.com">info@dropletvc.com</a>
   </footer>
 </body>
 </html>
