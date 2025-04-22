@@ -1,4 +1,4 @@
-/* Droplet VC Stylesheet */
+/* Droplet VC - Simplified and Corrected Styles */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -35,10 +35,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   min-height: 100vh;
   text-align: center;
-  padding: 0 1rem 3rem;
+  padding: 2rem 1rem;
   position: relative;
   overflow-x: hidden;
 }
@@ -49,18 +48,30 @@ body::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url('images/DropletVC_WhiteTransparent.png') center center / 80% no-repeat;
+  background: url('images/DropletVC_WhiteTransparent.png') no-repeat center;
+  background-size: 80%;
   opacity: 0.03;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
+}
+
+.hero-logo {
+  width: 180px;
+  margin-top: 2rem;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 h1 {
   font-size: 2.5rem;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
   font-family: 'Pacifico', cursive;
   text-shadow: 2px 2px var(--shadow-color);
   z-index: 1;
@@ -69,11 +80,12 @@ h1 {
 p {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0.5rem auto 2rem;
+  margin: 1rem auto;
   z-index: 1;
 }
 
 .button {
+  margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
   background: var(--button-bg);
@@ -81,70 +93,34 @@ p {
   border: none;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background 0.3s ease;
-  z-index: 1;
-  margin-bottom: 0.75rem;
   cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1;
 }
 
 .button:hover {
-  transform: scale(1.05);
   background: var(--button-hover);
   color: white;
+  transform: scale(1.05);
 }
 
 .cta-subtext {
-  font-size: 0.85rem;
-  color: var(--text-color);
+  font-size: 0.9rem;
   opacity: 0.85;
+  margin-top: 0.5rem;
   z-index: 1;
 }
 
 .contact {
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: var(--text-color);
   z-index: 1;
 }
 
 .contact a {
   color: var(--text-color);
   text-decoration: underline;
-}
-
-.hero-logo {
-  width: 180px;
-  margin-top: 2rem;
-  z-index: 1;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.logo-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 3rem;
-  z-index: 1;
-}
-
-.logo-row img {
-  width: 120px;
-  height: auto;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.logo-row img:hover {
-  transform: scale(1.05);
 }
 
 .lang-toggle {
@@ -158,24 +134,25 @@ p {
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--text-color);
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 0.4rem 0.7rem;
   border-radius: 6px;
   transition: background 0.3s;
 }
 
 .lang-toggle a:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 600px) {
   h1 {
-    margin-top: 1.2rem;
+    font-size: 2rem;
   }
   .hero-logo {
-    margin-top: 1.5rem;
+    width: 150px;
   }
   .button {
-    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 }
