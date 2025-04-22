@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #ff3b30, #ffd60a, #00c7be);
+      background: linear-gradient(135deg, #ff40b0, #00e3e3);
       color: white;
       display: flex;
       flex-direction: column;
@@ -24,29 +24,12 @@
       overflow: hidden;
     }
 
-    body::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      background-image: url('images/DropLetVC_Transparent.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      opacity: 0.05;
-      transform: translate(-50%, -50%);
-      z-index: 0;
-    }
-
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
       font-family: 'Pacifico', cursive;
-      color: #fefefe;
-      text-shadow: 2px 2px #ff3b30;
+      color: #ffffff;
+      text-shadow: 2px 2px #ff40b0;
       z-index: 1;
     }
 
@@ -88,13 +71,36 @@
       color: #fff;
       text-decoration: underline;
     }
+
+    .logo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .logo-gallery img {
+      width: 120px;
+      height: auto;
+      border-radius: 10px;
+      background: white;
+    }
   </style>
 </head>
 <body>
   <h1>Backing Global Outliers in Life & Deep Tech</h1>
   <p>Curious what we’re working on? Join the journey.</p>
-  
+
   <a class="button" href="https://dropletvc.substack.com/?r=5jm12v&utm_campaign=pub-share-checklist" target="_blank">Subscribe on Substack</a>
+
+  <div class="logo-gallery">
+    <img src="images/droplet_pink_teal_gradient.png" alt="Pink Teal Gradient Logo" />
+    <img src="images/droplet_red_orange_gradient.png" alt="Red Orange Gradient Logo" />
+    <img src="images/DropletVC_WhiteTransparent.png" alt="White Transparent Logo" />
+    <img src="images/DropletVC_Transparent.png" alt="Original Transparent Logo" />
+    <img src="images/DropletVC_BlackOnWhite.png" alt="Black on White Logo" />
+  </div>
 
   <div class="contact">
     Or reach out directly at <a href="mailto:info@dropletvc.com">info@dropletvc.com</a>
