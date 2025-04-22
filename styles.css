@@ -1,4 +1,4 @@
-/* Droplet VC - Final Styles with Dark Mode Toggle Support */
+/* Droplet VC - Final Styles with Theme-Based Logo */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -8,6 +8,7 @@
   --button-bg: #ffd60a;
   --button-hover: #ff6f00;
   --button-text: #000;
+  --logo-src: url('images/droplet_pink_teal_gradient.png');
 }
 
 .dark-mode {
@@ -17,6 +18,7 @@
   --button-bg: #00c7be;
   --button-hover: #ff3b30;
   --button-text: #000;
+  --logo-src: url('images/droplet_red_orange_gradient.png');
 }
 
 body {
@@ -93,6 +95,10 @@ body::before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   animation: fadeIn 1s ease-in-out;
   z-index: 1;
+  background-image: var(--logo-src);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @keyframes fadeIn {
