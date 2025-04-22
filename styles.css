@@ -1,4 +1,4 @@
-/* Droplet VC - Final Neon Styles with Better CTA Spacing */
+/* Droplet VC - Final Neon Styles with Improved CTA Spacing */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -133,8 +133,8 @@ p {
   cursor: pointer;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   animation: pulseGlow 2.5s infinite;
 }
 
@@ -153,8 +153,8 @@ p {
 .cta-subtext {
   font-size: 0.9rem;
   opacity: 0.85;
-  margin-bottom: 3rem;
-  margin-top: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .contact {
