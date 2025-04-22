@@ -1,4 +1,4 @@
-/* Droplet VC - Finalized Styles */
+/* Droplet VC - Final Styles with Offset Logo */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap');
 
 :root {
@@ -82,13 +82,15 @@ body::before {
   width: 180px;
   height: 180px;
   margin-top: 3rem;
-  z-index: 1;
+  margin-left: -50%;
+  align-self: flex-start;
   border-radius: 50%;
   object-fit: cover;
   background: white;
   padding: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   animation: fadeIn 1s ease-in-out;
+  z-index: 1;
 }
 
 @keyframes fadeIn {
@@ -161,12 +163,12 @@ p {
   h1 {
     font-size: 2rem;
   }
-
   .hero-logo {
     width: 150px;
     height: 150px;
+    margin-left: 0;
+    align-self: center;
   }
-
   .button {
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
